@@ -1,17 +1,18 @@
 package flagd_test
 
 import (
+	schemav1 "buf.build/gen/go/open-feature/flagd/protocolbuffers/go/schema/v1"
 	"context"
 	"fmt"
-	reflect "reflect"
-	"testing"
-
-	schemav1 "buf.build/gen/go/open-feature/flagd/protocolbuffers/go/schema/v1"
 	gomock "github.com/golang/mock/gomock"
 	flagdModels "github.com/open-feature/flagd/pkg/model"
+	"github.com/open-feature/flagd/pkg/service"
 	flagd "github.com/open-feature/go-sdk-contrib/providers/flagd/pkg"
 	of "github.com/open-feature/go-sdk/pkg/openfeature"
 	"google.golang.org/protobuf/types/known/structpb"
+	reflect "reflect"
+	"testing"
+	"time"
 )
 
 func TestNewProvider(t *testing.T) {
@@ -520,5 +521,51 @@ func TestObjectEvaluation(t *testing.T) {
 		if res.Reason != test.response.Reason {
 			t.Errorf("unexpected Reason received, expected %v, got %v", test.response.Reason, res.Reason)
 		}
+	}
+}
+
+func TestHandleEvent(t *testing.T) {
+	tests := []struct {
+		name string
+	}{
+		{
+			name: "Trial",
+		},
+	}
+
+	ctrl := gomock.NewController(t)
+	defer ctrl.Finish()
+
+	for _, test := range tests {
+		t.Run(test.name, func(t *testing.T) {
+
+			mock := NewMockIService(ctrl)
+
+			provider := flagd.Provider{
+				Service: mock,
+			}
+
+			flagd.WithLRUCache(100)(&provider)
+
+			ctx, cancelFunc := context.WithCancel(context.Background())
+			flagd.WithContext(ctx)(&provider)
+
+			mock.EXPECT().EventStream(gomock.Any(), gomock.Any(), gomock.Any(), gomock.Any()).Do(
+				func(ctx context.Context, eventChan chan<- *schemav1.EventStreamResponse,
+					maxAttempts int, errChan chan<- error) {
+
+					context.WithCancel(context.Background())
+
+					eventChan <- &schemav1.EventStreamResponse{
+						Type: string(service.ConfigurationChange),
+						Data: nil,
+					}
+
+					time.Sleep(5 * time.Second)
+					cancelFunc()
+				})
+
+			flagd.ExportHandleEvent(&provider, ctx)
+		})
 	}
 }

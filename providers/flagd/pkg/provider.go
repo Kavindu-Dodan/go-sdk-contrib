@@ -472,6 +472,9 @@ func (p *Provider) handleEvents(ctx context.Context) error {
 				WithoutCache()(p)
 			}
 			return err
+		case <-ctx.Done():
+			log.Info("Stopping event handling with context done.")
+			return nil
 		}
 	}
 }
