@@ -37,6 +37,8 @@ jobs:
         uses: actions/setup-go@v2
         with:
           go-version: 1.18
+      - name: Setup go work
+        run: make workspace-init & workspace-update
       # Create SBOM
       - name: Generate SBOM
         uses: CycloneDX/gh-gomod-generate-sbom@v1
