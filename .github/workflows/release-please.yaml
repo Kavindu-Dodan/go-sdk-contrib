@@ -48,6 +48,9 @@ jobs:
           echo "LICENSE_FOLDER=third-party-license" >> $GITHUB_OUTPUT
           echo "LICENSE_ARCHIVE=third-party-license.tar.gz" >> $GITHUB_OUTPUT
           echo "LICENSE_ERROR_FILE=license-errors.txt" >> $GITHUB_OUTPUT
+      - name: Test strategy
+        run: go-licenses report ./${{ matrix.release }}/...
+        continue-on-error: true # ignore errors which can be referred through error artefact
       - name: Run go-licenses for module ${{ matrix.release }}
         run: go-licenses save ./${{ matrix.release }}/... --save_path=./${{ steps.license-files.outputs.LICENSE_FOLDER }} --force --logtostderr=false 2> ./${{ steps.license-files.outputs.LICENSE_ERROR_FILE }}
         continue-on-error: true # ignore errors which can be referred through error artefact
