@@ -1,5 +1,37 @@
 # Changelog
 
+## [0.1.3](https://github.com/Kavindu-Dodan/go-sdk-contrib/compare/providers/flagd-in-process-v0.1.2...providers/flagd-in-process/v0.1.3) (2023-12-12)
+
+
+### 🐛 Bug Fixes
+
+* **deps:** update module github.com/open-feature/flagd to v0.4.2 ([#364](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/364)) ([1218631](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/1218631af53b82eba43768da085e0b88ec2ef296))
+* **deps:** update module github.com/open-feature/flagd/core to v0.6.7 ([#350](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/350)) ([8bccc11](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/8bccc119f0f454adb3aa35e5c74bff43c50a80d3))
+* **deps:** update module github.com/open-feature/go-sdk to v1.8.0 ([#329](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/329)) ([c99b527](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/c99b52728bad9dce52bfb78a08ae5f4eea83a397))
+* **deps:** update module google.golang.org/grpc to v1.58.3 [security] ([#356](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/356)) ([d4a5098](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/d4a5098e84fdeb5aa9936ac496e75404f234e247))
+* error handing, add e2e tests ([#334](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/334)) ([dfc3b5a](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/dfc3b5a73e6708aa852a2f2651468de96a754694))
+* fix flagd dependencies ([#380](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/380)) ([b7baa69](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/b7baa6990e05f46637917d83b07dbe0f741d0036))
+* fractional operator name ([#336](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/336)) ([d419274](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/d4192741db354568c05f0fc1306846b2553caff4))
+
+
+### ✨ New Features
+
+* deprecate dedicated flagd in-process provider ([#396](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/396)) ([62ac471](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/62ac4711a37195579de9c04e628d3785ca06f32f))
+* implement in-process-flagd provider ([#327](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/327)) ([f9a68b1](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/f9a68b10d42149b87f87fad03d6829eb77443735))
+
+
+### 🧹 Chore
+
+* fixed the spec URL on the readme ([0a483a8](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/0a483a83053c468eb9ae93287fb661da0abea8cb))
+* improve e2e test registration ([#400](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/400)) ([b22105c](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/b22105c392e24ce592020a5f1f652547bb5a89e0))
+* **main:** release providers/flagd-in-process 0.1.1 ([#337](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/337)) ([0a529f6](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/0a529f693118f268f6536fbe28d145e86adb2f51))
+* **main:** release providers/flagd-in-process 0.1.2 ([#353](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/353)) ([351ea8e](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/351ea8e175a2c7a9103d5fd9dc9dee6caa5a5753))
+
+
+### 🔄 Refactoring
+
+* migrate to connectrpc/connect-go ([#372](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/372)) ([aba4f4e](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/aba4f4e3cba0b9af23e665f0e736ec715d3f2fdc))
+
 ## [0.1.2](https://github.com/open-feature/go-sdk-contrib/compare/providers/flagd-in-process/v0.1.1...providers/flagd-in-process/v0.1.2) (2023-12-05)
 
 
