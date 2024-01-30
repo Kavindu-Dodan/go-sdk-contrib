@@ -3,6 +3,7 @@ package integration
 import (
 	"context"
 	"errors"
+	"fmt"
 	"time"
 
 	"github.com/open-feature/go-sdk/openfeature"
@@ -25,6 +26,8 @@ func aFlagdProviderIsSet(ctx context.Context) (context.Context, error) {
 	}
 
 	callBack := func(details openfeature.EventDetails) {
+		fmt.Println("Name : " + details.ProviderName)
+
 		// emit readiness
 		close(readyChan)
 	}
@@ -32,6 +35,7 @@ func aFlagdProviderIsSet(ctx context.Context) (context.Context, error) {
 	openfeature.AddHandler(openfeature.ProviderReady, &callBack)
 
 	client := openfeature.NewClient("flagd tests")
+	//client.AddHandler(openfeature.ProviderReady, &callBack)
 
 	select {
 	case <-readyChan:
