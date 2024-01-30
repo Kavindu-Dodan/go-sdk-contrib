@@ -20,7 +20,7 @@ type ctxClientKey struct{}
 func aFlagdProviderIsSet(ctx context.Context) (context.Context, error) {
 	readyChan := make(chan struct{})
 
-	err := openfeature.SetNamedProvider("flagd tests", test_provider_supplier())
+	err := openfeature.SetProvider(test_provider_supplier())
 	if err != nil {
 		return nil, err
 	}
