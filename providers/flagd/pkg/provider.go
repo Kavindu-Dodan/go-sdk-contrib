@@ -152,7 +152,7 @@ func (p *Provider) BooleanEvaluation(
 	ctx context.Context, flagKey string, defaultValue bool, evalCtx of.FlattenedContext,
 ) of.BoolResolutionDetail {
 	if p.status != of.ReadyState {
-		fmt.Println("Provider not ready")
+		fmt.Println("Provider not ready, in state : " + p.status)
 		return of.BoolResolutionDetail{
 			Value: false,
 			ProviderResolutionDetail: of.ProviderResolutionDetail{
@@ -168,7 +168,7 @@ func (p *Provider) StringEvaluation(
 	ctx context.Context, flagKey string, defaultValue string, evalCtx of.FlattenedContext,
 ) of.StringResolutionDetail {
 	if p.status != of.ReadyState {
-		fmt.Println("Provider not ready")
+		fmt.Println("Provider not ready, in state : " + p.status)
 		return of.StringResolutionDetail{
 			Value: defaultValue,
 			ProviderResolutionDetail: of.ProviderResolutionDetail{
@@ -184,7 +184,7 @@ func (p *Provider) FloatEvaluation(
 	ctx context.Context, flagKey string, defaultValue float64, evalCtx of.FlattenedContext,
 ) of.FloatResolutionDetail {
 	if p.status != of.ReadyState {
-		fmt.Println("Provider not ready")
+		fmt.Println("Provider not ready, in state : " + p.status)
 		return of.FloatResolutionDetail{
 			Value: defaultValue,
 			ProviderResolutionDetail: of.ProviderResolutionDetail{
