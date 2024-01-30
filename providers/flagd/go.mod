@@ -25,6 +25,8 @@ require (
 	sigs.k8s.io/controller-runtime v0.16.3
 )
 
+replace github.com/open-feature/go-sdk-contrib/tests/flagd v1.3.3 => ../../tests/flagd
+
 require (
 	github.com/cucumber/gherkin/go/v26 v26.2.0 // indirect
 	github.com/cucumber/messages/go/v21 v21.0.1 // indirect
