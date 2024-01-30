@@ -1,19 +1,14 @@
 package rpc
 
 import (
-	"crypto/tls"
-	"crypto/x509"
-	"errors"
-	"fmt"
-	"net"
-	"net/http"
-	"os"
-	"time"
-
 	schemaConnectV1 "buf.build/gen/go/open-feature/flagd/connectrpc/go/schema/v1/schemav1connect"
 	schemaV1 "buf.build/gen/go/open-feature/flagd/protocolbuffers/go/schema/v1"
 	"connectrpc.com/connect"
 	"connectrpc.com/otelconnect"
+	"crypto/tls"
+	"crypto/x509"
+	"errors"
+	"fmt"
 	"github.com/go-logr/logr"
 	flagdModels "github.com/open-feature/flagd/core/pkg/model"
 	flagdService "github.com/open-feature/flagd/core/pkg/service"
@@ -23,6 +18,9 @@ import (
 	of "github.com/open-feature/go-sdk/openfeature"
 	"golang.org/x/net/context"
 	"google.golang.org/protobuf/types/known/structpb"
+	"net"
+	"net/http"
+	"os"
 )
 
 const (
@@ -451,7 +449,7 @@ func (s *Service) startEventStream(ctx context.Context) {
 			}
 		}
 
-		time.Sleep(s.retryCounter.sleep())
+		//time.Sleep(5 * time.M)
 	}
 
 	// retry attempts exhausted. Disable cache and emit error event
