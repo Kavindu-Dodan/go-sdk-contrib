@@ -449,6 +449,7 @@ func (s *Service) startEventStream(ctx context.Context) {
 			}
 		}
 
+		fmt.Println("restarting rpc provider listener")
 		//time.Sleep(5 * time.M)
 	}
 
@@ -480,6 +481,7 @@ func (s *Service) streamClient(ctx context.Context) error {
 		case string(flagdService.ConfigurationChange):
 			s.handleConfigurationChangeEvent(stream.Msg())
 		case string(flagdService.ProviderReady):
+			fmt.Println("rpc provider is ready")
 			s.handleReadyEvent()
 		case string(flagdService.Shutdown):
 			// this is considered as a non-error
