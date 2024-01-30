@@ -27,6 +27,8 @@ require (
 
 replace github.com/open-feature/go-sdk-contrib/tests/flagd v1.3.3 => ../../tests/flagd
 
+replace github.com/open-feature/go-sdk v1.9.0 => github.com/Kavindu-Dodan/go-sdk v0.0.0-20240130221438-0052e4b4fca0
+
 require (
 	github.com/cucumber/gherkin/go/v26 v26.2.0 // indirect
 	github.com/cucumber/messages/go/v21 v21.0.1 // indirect

@@ -10,34 +10,34 @@ import (
 	"github.com/open-feature/go-sdk/openfeature"
 )
 
-//func TestETestEvaluationFlagdInRPC(t *testing.T) {
-//	if testing.Short() {
-//		// skip e2e if testing -short
-//		t.Skip()
-//	}
-//
-//	flag.Parse()
-//
-//	name := "evaluation.feature"
-//
-//	testSuite := godog.TestSuite{
-//		Name: name,
-//		TestSuiteInitializer: integration.InitializeTestSuite(func() openfeature.FeatureProvider {
-//			return flagd.NewProvider(flagd.WithPort(8013))
-//		}),
-//		ScenarioInitializer: integration.InitializeEvaluationScenario,
-//		Options: &godog.Options{
-//			Format:   "pretty",
-//			Paths:    []string{"../../../spec/specification/assets/gherkin/evaluation.feature"},
-//			TestingT: t, // Testing instance that will run subtests.
-//			Strict:   true,
-//		},
-//	}
-//
-//	if testSuite.Run() != 0 {
-//		t.Fatal("non-zero status returned, failed to run evaluation tests")
-//	}
-//}
+func TestETestEvaluationFlagdInRPC(t *testing.T) {
+	if testing.Short() {
+		// skip e2e if testing -short
+		t.Skip()
+	}
+
+	flag.Parse()
+
+	name := "evaluation.feature"
+
+	testSuite := godog.TestSuite{
+		Name: name,
+		TestSuiteInitializer: integration.InitializeTestSuite(func() openfeature.FeatureProvider {
+			return flagd.NewProvider(flagd.WithPort(8013))
+		}),
+		ScenarioInitializer: integration.InitializeEvaluationScenario,
+		Options: &godog.Options{
+			Format:   "pretty",
+			Paths:    []string{"../../../spec/specification/assets/gherkin/evaluation.feature"},
+			TestingT: t, // Testing instance that will run subtests.
+			Strict:   true,
+		},
+	}
+
+	if testSuite.Run() != 0 {
+		t.Fatal("non-zero status returned, failed to run evaluation tests")
+	}
+}
 
 func TestJsonEvaluatorFlagdInProcess(t *testing.T) {
 	if testing.Short() {
