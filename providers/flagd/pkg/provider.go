@@ -82,6 +82,7 @@ func (p *Provider) Init(_ of.EvaluationContext) error {
 
 	// avoid reinitialization if initialized
 	if p.initialized {
+		fmt.Println("Initializing same provider !!")
 		return nil
 	}
 
