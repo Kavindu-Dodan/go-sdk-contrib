@@ -1,5 +1,139 @@
 # Changelog
 
+## [0.3.0](https://github.com/Kavindu-Dodan/go-sdk-contrib/compare/providers/flagd-v0.2.0...providers/flagd/v0.3.0) (2024-04-19)
+
+
+### ⚠ BREAKING CHANGES
+
+* use new eval/sync protos (requires flagd v0.7.3+) ([#451](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/451))
+
+### 🐛 Bug Fixes
+
+* apply lru cache to provider ([#131](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/131)) ([79fe435](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/79fe435181fc9cfa95f2f7ef49a007a784cc2c88))
+* **deps:** update golang.org/x/exp digest to 1b97071 ([#379](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/379)) ([d2b2f1e](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/d2b2f1e19d5d6e9168174dc2d0196453a57ecac1))
+* **deps:** update golang.org/x/exp digest to 814bf88 ([#453](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/453)) ([80cdaaa](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/80cdaaa9fa5ffa25eee3dd0de98588ad66aa5f2e))
+* **deps:** update golang.org/x/exp digest to a685a6e ([#479](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/479)) ([e55c610](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/e55c610e419589d9bfc3a90089391cbe615d71c7))
+* **deps:** update module buf.build/gen/go/open-feature/flagd/bufbuild/connect-go to v1.5.2-20230317150644-afd1cc2ef580.1 ([#170](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/170)) ([a04997e](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/a04997eea44f89bcf607625a4f02cfc45587914b))
+* **deps:** update module buf.build/gen/go/open-feature/flagd/bufbuild/connect-go to v1.5.2-20230710190440-2333a9579c1a.1 ([#260](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/260)) ([35d2774](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/35d277438add84d139dbc416e0a9e180eade7ed2))
+* **deps:** update module buf.build/gen/go/open-feature/flagd/protocolbuffers/go to v1.33.0-20240215170432-1e611e2999cc.1 ([#468](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/468)) ([aebf9d0](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/aebf9d0a7cc514f66dc26d50104bc4656408cb44))
+* **deps:** update module connectrpc.com/connect to v1.14.0 ([#412](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/412)) ([f1ea55f](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/f1ea55feee1773f2582f8074044b36ca51480f36))
+* **deps:** update module connectrpc.com/otelconnect to v0.7.0 ([#422](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/422)) ([a7a1540](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/a7a1540003298968b86b90ecfb80062e2a6f3671))
+* **deps:** update module github.com/bufbuild/connect-go to v1.10.0 ([#284](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/284)) ([a6a67b0](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/a6a67b01c0441b4cb4881945109265bd6d9e8cd6))
+* **deps:** update module github.com/bufbuild/connect-go to v1.5.1 ([#99](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/99)) ([0f7c8a4](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/0f7c8a435b4acfc75317a186c871b020c1432aed))
+* **deps:** update module github.com/bufbuild/connect-go to v1.5.2 ([#118](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/118)) ([0207626](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/0207626f688d61a6d26dbfd3086e25277241401b))
+* **deps:** update module github.com/bufbuild/connect-go to v1.7.0 ([#177](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/177)) ([591759f](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/591759fd59c9425e0583c35b67bdeddca4173b88))
+* **deps:** update module github.com/bufbuild/connect-opentelemetry-go to v0.2.0 ([#192](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/192)) ([13c923f](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/13c923f91407c8ba2de002ab8d5e82d563f399c8))
+* **deps:** update module github.com/go-logr/logr to v1.2.4 ([#158](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/158)) ([5fdfa0e](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/5fdfa0e9cf21ef2ebf8a86fbc0c71cc591b185c9))
+* **deps:** update module github.com/go-logr/logr to v1.3.0 ([#361](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/361)) ([d29fe69](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/d29fe69424c9a22f89a4147b70be090a1716981c))
+* **deps:** update module github.com/go-logr/logr to v1.4.1 ([#415](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/415)) ([77c597f](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/77c597f6d660b0c9920b809183aa9bb9fadf6238))
+* **deps:** update module github.com/google/go-cmp to v0.6.0 ([#354](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/354)) ([dde96df](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/dde96df31dc96629857e1866c026236c1c4a1843))
+* **deps:** update module github.com/hashicorp/golang-lru/v2 to v2.0.2 ([#142](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/142)) ([e9149a3](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/e9149a3f451f65ddc1576cd09376a23158de9e15))
+* **deps:** update module github.com/hashicorp/golang-lru/v2 to v2.0.4 ([#233](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/233)) ([dc053d0](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/dc053d05d49ab4500b443dd5c933a9feaec1ca6a))
+* **deps:** update module github.com/hashicorp/golang-lru/v2 to v2.0.7 ([#312](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/312)) ([cd2a830](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/cd2a83044ff88087a2d8ea03632e876b1cf00bd0))
+* **deps:** update module github.com/open-feature/flagd to v0.3.4 ([#83](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/83)) ([958c9fa](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/958c9fa81637cbacf59259d100d74407f41cd87c))
+* **deps:** update module github.com/open-feature/flagd to v0.3.7 ([#106](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/106)) ([497ed34](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/497ed34add9d3f77fdcd3eb48e175aa39cc4388f))
+* **deps:** update module github.com/open-feature/flagd to v0.4.2 ([#134](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/134)) ([ad8c67e](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/ad8c67edbc095b4282b5ebfdd6970d8827ba45d1))
+* **deps:** update module github.com/open-feature/flagd/core to v0.5.3 ([#195](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/195)) ([c9cd501](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/c9cd5011f18c1994b718423847c40adc88af2030))
+* **deps:** update module github.com/open-feature/flagd/core to v0.5.4 ([#235](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/235)) ([b908b07](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/b908b07b7f73a345bd8aed1e85050e2e7fa0a878))
+* **deps:** update module github.com/open-feature/flagd/core to v0.6.0 ([#259](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/259)) ([3121c53](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/3121c5388f24614d7131cfc5ff47402faa6e64b5))
+* **deps:** update module github.com/open-feature/flagd/core to v0.6.2 ([#286](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/286)) ([6290121](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/62901210bda2aa62333b6648ae9ab9dad9612d48))
+* **deps:** update module github.com/open-feature/flagd/core to v0.6.6 ([#307](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/307)) ([b735aa8](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/b735aa849dfc63bbea0dcacffeb089390d91c782))
+* **deps:** update module github.com/open-feature/flagd/core to v0.6.7 ([#350](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/350)) ([8bccc11](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/8bccc119f0f454adb3aa35e5c74bff43c50a80d3))
+* **deps:** update module github.com/open-feature/flagd/core to v0.7.4 ([#384](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/384)) ([09b4224](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/09b42243885c1d74bb1d02d08aa3c5621ede7330))
+* **deps:** update module github.com/open-feature/flagd/core to v0.8.1 ([#483](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/483)) ([4c3f005](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/4c3f005f587902b239ea904c8d050d054dc8afe7))
+* **deps:** update module github.com/open-feature/go-sdk to v1.2.0 ([#103](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/103)) ([eedb577](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/eedb577745fd98d5189132ebbaa8eb82bdf99dd8))
+* **deps:** update module github.com/open-feature/go-sdk to v1.5.1 ([#263](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/263)) ([c75ffd6](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/c75ffd6017689a86860dec92c1a1564b6145f0c9))
+* **deps:** update module github.com/open-feature/go-sdk to v1.6.0 ([#289](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/289)) ([13eeb48](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/13eeb482ee3d69c5fb8100563501c2250b6454f1))
+* **deps:** update module github.com/open-feature/go-sdk to v1.7.0 ([#315](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/315)) ([3f049ad](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/3f049ad34e93c3b9b9d4cf5a2e56f3777eb858e6))
+* **deps:** update module github.com/open-feature/go-sdk to v1.8.0 ([#329](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/329)) ([c99b527](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/c99b52728bad9dce52bfb78a08ae5f4eea83a397))
+* **deps:** update module github.com/open-feature/go-sdk-contrib/tests/flagd to v1.4.1 ([#484](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/484)) ([6f4e7b7](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/6f4e7b746e8854b999ec6ece6a8259a5c9e77fdc))
+* **deps:** update module go.uber.org/mock to v0.4.0 ([#425](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/425)) ([91f70c0](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/91f70c0dba1e1ff8d7214b05de8b86eead43a922))
+* **deps:** update module golang.org/x/net to v0.10.0 ([#165](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/165)) ([e7249e2](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/e7249e26f20cfe4a6c99ecc4da8583971ba080fc))
+* **deps:** update module golang.org/x/net to v0.12.0 ([#240](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/240)) ([b4b161e](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/b4b161ecb8e135fe90215e63696bb664ed06b161))
+* **deps:** update module golang.org/x/net to v0.17.0 [security] ([#347](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/347)) ([a05689c](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/a05689cba2cea78c4741ae0e6a096fa370970b9c))
+* **deps:** update module golang.org/x/net to v0.5.0 ([#56](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/56)) ([168d6cf](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/168d6cf9b7047ba412c239f2349d2e3d4b02a21d))
+* **deps:** update module golang.org/x/net to v0.7.0 [security] ([#136](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/136)) ([d7455d6](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/d7455d68ff5ee1488ac1354dcfeaef0a2dd77e42))
+* **deps:** update module golang.org/x/net to v0.8.0 ([#148](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/148)) ([6e695a3](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/6e695a3e21f48a52fc74b9aa389c4b0a1b51c009))
+* **deps:** update module google.golang.org/grpc to v1.62.1 ([#430](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/430)) ([c20613c](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/c20613c5079f2a9871c451771aca2b8ab56d7bcb))
+* **deps:** update module google.golang.org/protobuf to v1.29.1 ([#141](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/141)) ([f2a924f](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/f2a924ff331fbcfd479e948805223f02af9c032b))
+* **deps:** update module google.golang.org/protobuf to v1.30.0 ([#151](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/151)) ([bf98120](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/bf98120d82218471c7acc2773c737d7bff64e401))
+* **deps:** update module google.golang.org/protobuf to v1.31.0 ([#249](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/249)) ([909b0b7](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/909b0b73fca87f5f0f374ff299eae4f7fa884f5d))
+* **deps:** update module sigs.k8s.io/controller-runtime to v0.17.2 ([#434](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/434)) ([acaf0cb](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/acaf0cb8c479ff6978be4753cc192fdaac077ecb))
+* error handing, add e2e tests ([#334](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/334)) ([dfc3b5a](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/dfc3b5a73e6708aa852a2f2651468de96a754694))
+* improvements to the shutdown of provider & support go 1.20 ([#442](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/442)) ([6056a8a](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/6056a8a6854d486a476ccd581ca4570148e1e025))
+* nil client causes panic ([#408](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/408)) ([74df958](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/74df9580ee627a5eb15427c9888b72ca10bf57e8))
+* Purge cache if config change event handling fails ([#85](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/85)) ([bf47049](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/bf4704959411f3957a8c9266f0756b768c915ce1))
+* tidy workspaces ([#97](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/97)) ([c71a5ec](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/c71a5ec7686ec0572bb47f17dbca7e0ec48252d7))
+
+
+### ✨ New Features
+
+* aligned environment variables application with flagd provider spec ([#119](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/119)) ([5ee1f2c](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/5ee1f2c8af0d41eb3820d32ca7ffe30777a2d12a))
+* consolidate flagd in-process provider ([#394](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/394)) ([5f68c85](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/5f68c8520f2e2f480512c764ec39f6ecd0b30d1d))
+* Eventing support for flagd provider ([#317](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/317)) ([6b373cb](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/6b373cb393729c6f1f2a31b334cf06fac65dd369))
+* expose ProviderOption to set logr logger & implemented structured logging with levels ([#93](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/93)) ([ac5e8dd](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/ac5e8dd274c9fd811dccaca85d3aba33994b480b))
+* exposed WithTLS provider option. Allow tls to be used without cert path (default to host system's CAs) ([#112](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/112)) ([c5bae5f](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/c5bae5f32b473796bdc2b7c8614439be53a37739))
+* flag evaluation metadata ([#278](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/278)) ([b0a61cd](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/b0a61cde5abcd7ea0bc10ef7c6174fc1be5cb423))
+* flagd - make sure provider initialize only once ([#418](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/418)) ([c061cf4](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/c061cf4ac1e76cfe2aef9af52746fe0c14f6f610))
+* flagd add scope to flag metadata ([#420](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/420)) ([b3949fe](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/b3949fe00318bee037fd2bd4e1655182f1fcdc31))
+* flagd offline in-process support with flags sources from file ([#421](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/421)) ([8685cc0](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/8685cc0c1c4bee83ea38fa76e189c1a10840ec71))
+* handle consolidated configuration change event ([#66](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/66)) ([69cb619](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/69cb619b6cf0a3095ae0bb2f6544e22fb3d5786e))
+* improve in-process error mapping ([#440](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/440)) ([1dee30b](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/1dee30b849fd93694d1945490b7aa53b82669770))
+* otel interceptor for flagd go-sdk ([#176](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/176)) ([17e5ab7](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/17e5ab796717c090bb203ebc766375e8efada23b))
+* update to latest flagd core release ([#495](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/495)) ([4034850](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/40348500c7adc433bd2387f43bebcad83ae65153))
+* use new eval/sync protos (requires flagd v0.7.3+) ([#451](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/451)) ([308bba1](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/308bba1656dfe05993b83bc9f2059082b41e79f0))
+
+
+### 🧹 Chore
+
+* add flagd e2e tests ([#331](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/331)) ([b32ec64](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/b32ec64e212935d23e1302321bb60f1e5dc345dd))
+* add missing go-cmp dep ([#330](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/330)) ([c9c7d66](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/c9c7d66b745ce09e49069b67af9e3bf8a92dfa85))
+* bump interlinked deps ([#236](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/236)) ([ea2233c](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/ea2233cc92f0bbb20affa61776a7b9ac166f2575))
+* fix flagd dependencies after mono repo split ([#172](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/172)) ([4b10a18](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/4b10a1833bad5b7f91c6fe2a4c4c2395e14657e4))
+* flagd provider cache invalidation test ([#92](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/92)) ([db80d76](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/db80d76740eaaa716b490a6ffb673acc7a0b5a40))
+* improve contrib guide with e2e test details ([#447](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/447)) ([8dd5fc6](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/8dd5fc6a317665918b3432d6e4d7a4ba0598f554))
+* improve e2e test registration ([#400](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/400)) ([b22105c](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/b22105c392e24ce592020a5f1f652547bb5a89e0))
+* **main:** release providers/flagd 0.1.11 ([#174](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/174)) ([9d92ad3](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/9d92ad327dc245c32fe2ac71d94c2c6f8e90d840))
+* **main:** release providers/flagd 0.1.12 ([#197](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/197)) ([85d43c9](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/85d43c90deb7c65c5587f908f5d31ce683a28cbb))
+* **main:** release providers/flagd 0.1.13 ([#202](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/202)) ([3557d5e](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/3557d5e7aa685124c67cb8d37d7eaa05c14d51b3))
+* **main:** release providers/flagd 0.1.14 ([#248](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/248)) ([70ad95f](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/70ad95f539411df962e1cceee6e8d7e32a501749))
+* **main:** release providers/flagd 0.1.15 ([#295](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/295)) ([d7ef583](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/d7ef583e6588cc0ef8e99dd35ac8db4c0201d9d8))
+* **main:** release providers/flagd 0.1.16 ([#302](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/302)) ([72555d1](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/72555d1457dbedec69bda14afdf5efd0bf40f813))
+* **main:** release providers/flagd 0.1.17 ([#333](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/333)) ([04b3592](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/04b35929cf6b597ffb2e213460ccf43ace8bfc40))
+* **main:** release providers/flagd 0.1.18 ([#340](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/340)) ([ca1819e](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/ca1819e9ac0cecdce1c1db2ba8c4e60ccef700a0))
+* **main:** release providers/flagd 0.1.19 ([#395](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/395)) ([b4c20b4](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/b4c20b45617e86b6e06c5c5fa68d672ff3efcb9b))
+* **main:** release providers/flagd 0.1.20 ([#402](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/402)) ([948da3d](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/948da3de42803edd61a78f27ed465c78fc9e7bec))
+* **main:** release providers/flagd 0.1.21 ([#419](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/419)) ([ebb0131](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/ebb0131190bbc375f143e72f7e8c00bbca1e2aac))
+* **main:** release providers/flagd 0.1.22 ([#436](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/436)) ([bf09669](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/bf096691a00ee0d553d7c2bf0e9a9aadd2b02a64))
+* **main:** release providers/flagd 0.2.0 ([#448](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/448)) ([1f8276e](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/1f8276e782f47d59d4ed52b5bfa1e17fc9d9f05f))
+* move flagd specific submodule to flagd module ([#449](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/449)) ([243a69c](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/243a69cad40f1a36b302de3247a1de0068096867))
+* release main ([#100](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/100)) ([3547a2c](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/3547a2c208aea82db65bc0d730bdf664bc4467bd))
+* release main ([#104](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/104)) ([a2c41ef](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/a2c41ef687ab8811f10ad3b0a5ab7a6c7fcaf270))
+* release main ([#115](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/115)) ([72d99e4](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/72d99e427d7313897190082731b47e3b093fcf8a))
+* release main ([#121](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/121)) ([c6f85de](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/c6f85de0380944eba9ec7f8199c8032387a5d5aa))
+* release main ([#122](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/122)) ([ffdc02c](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/ffdc02cfcf039a9f243586ba568802e71f5d47ca))
+* release main ([#132](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/132)) ([65c70fd](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/65c70fd7f23104cbb9cd16f49557fc8e705de587))
+* release main ([#82](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/82)) ([57d6371](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/57d6371c720da77d7f7c2c754963de16dfc61351))
+* release main ([#86](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/86)) ([e8594a8](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/e8594a8705be807db7cda663c32409de5cf44b91))
+* release main ([#94](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/94)) ([b441d7f](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/b441d7fb01e50e5de5b8b6058312817062901f83))
+* release main ([#98](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/98)) ([ba789a2](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/ba789a27fc2dd05a19444cb5741a4afe7f061241))
+* update flagd e2e tests ([#466](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/466)) ([a8ee306](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/a8ee3068bd3b174bc75a6aeefa0441c61a5b43f7))
+* update module github.com/open-feature/go-sdk to v1.4.0 ([#223](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/223)) ([7c8ea46](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/7c8ea46e3e094f746dbf6d80ba6a1b606314e8d7))
+* update to go-sdk 1.9.0 ([#404](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/404)) ([11fa3ab](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/11fa3aba065a6dd81caca30e76efc16fb64a25e3))
+
+
+### 📚 Documentation
+
+* remove duplicate in doc ([#428](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/428)) ([b9a27d9](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/b9a27d9277b7e261d58cb76a34162033dbf5b971))
+* update flagd port in readme ([#207](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/207)) ([919d808](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/919d80855ae4e12ba7908626ddef6b81f34f570f))
+
+
+### 🔄 Refactoring
+
+* Handle context done channel ([#89](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/89)) ([7521cd5](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/7521cd5eeb74394c299b625c80d96f34814ed11f))
+* migrate to connectrpc/connect-go ([#372](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/372)) ([aba4f4e](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/aba4f4e3cba0b9af23e665f0e736ec715d3f2fdc))
+* reduce duplication of flagd provider service ([#135](https://github.com/Kavindu-Dodan/go-sdk-contrib/issues/135)) ([f444b38](https://github.com/Kavindu-Dodan/go-sdk-contrib/commit/f444b38b13f4230b1243e89ef7b4a942338025f0))
+
 ## [0.2.0](https://github.com/open-feature/go-sdk-contrib/compare/providers/flagd/v0.1.22...providers/flagd/v0.2.0) (2024-04-11)
 
 
